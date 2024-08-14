@@ -84,3 +84,6 @@ patternOfN(3);
 
 
 
+
+
+
