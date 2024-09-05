@@ -1,4 +1,4 @@
-//
+//sum of series
 function sumOfSeries(N, X) {
     let sum =1;
     for (let i=1; i<=N;i++){

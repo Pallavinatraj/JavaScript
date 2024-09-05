@@ -10,3 +10,4 @@ function addNumber (a,b,c){
     console.log(a+b+c);
 }
 addNumber(270,890,78);
+

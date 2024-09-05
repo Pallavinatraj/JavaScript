@@ -1,4 +1,4 @@
-//
+//Pattern of N
 function printNumberLines(count) {
     let lines = [];
     let start = 1;
