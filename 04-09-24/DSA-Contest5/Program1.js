@@ -1,4 +1,4 @@
-   //Count such pairs
+    //Count such pairs
  function countSuchPairs(N,K,A){
     let sum =0;
     for(let i=0; i<N;i++){
