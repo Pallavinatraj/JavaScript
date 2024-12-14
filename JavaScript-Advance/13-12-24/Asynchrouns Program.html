@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+
+<body>
+    <h1>Counter :-</h1>
+    <h3 id="counter"></h3>
+    <input input="text" id="text" placeholder="Start Typing...">
+</body>
+
+</html>
+<script>
+    function counter() {
+        let counter = 0;
+        let name = "Pallavi Natraj"
+        let text = document.querySelector("#text").value;
+
+
+        let id = setInterval(function () {
+            if (name === text) {
+                alert("Your Name is correct");
+                clearInterval(id);
+
+            }
+            if (counter === 10) {
+                alert("Your Time is Exceed");
+                text.disabled = "true";
+                clearInterval(id);
+            }
+
+            let h3 = document.querySelector("#counter")
+            h3.innerText = counter;
+            counter++
+
+        }, 1000);
+    }
+    counter();
+
+
+</script>
