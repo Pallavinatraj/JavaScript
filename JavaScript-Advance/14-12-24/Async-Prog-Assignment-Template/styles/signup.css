@@ -26,7 +26,8 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     font-size: 18px;
-    color: #fff;
+    color: black;
+    font-weight: 600;
 
 }
 
@@ -35,9 +36,9 @@ nav ul li a::after {
     width: 0;
     height: 3px;
     background: #ff004f;
-    position: absolute;
+    /* position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -6px; */
     transition: 0.5s;
 }
 
@@ -47,7 +48,7 @@ nav ul li a:hover::after {
 
 body div {
     width: 450px;
-    height: 350px;
+    height: 450px;
     margin: auto;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -65,19 +66,17 @@ h1 {
     margin-bottom: 20px;
     font-size: 16px;
     border-radius: 4px;
-    width: 90%;
+    /* width: 90%; */
     gap: 15px;
     border: none;
 
 }
 
 .form>input {
-    width: 300px;
-    height: 30px;
+    width: 350px;
+    height: 40px;
     margin: auto;
-    border-radius: 3px;
-
-
+    border-radius: 6px;
 }
 
 button {
@@ -89,4 +88,8 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+p {
+    margin: auto;
 }

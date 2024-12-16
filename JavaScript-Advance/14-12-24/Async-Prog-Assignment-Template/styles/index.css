@@ -44,3 +44,32 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
+
+#slideshow img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.movie {
+    width: 150px;
+    text-align: center;
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#sort-buttons button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
