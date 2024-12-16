@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+
+<body>
+    <img id="image" src="https://media.tenor.com/je-huTL1vwgAAAAC/loading-buffering.gif">
+</body>
+
+</html>
+
+<script>
+    function bankServer() {
+        return false;
+    }
+
+    let paymentPromises = new Promise(function (resolve, reject) {
+        let bank = bankServer();
+
+        setInterval(function () {
+            if (bank) {
+                resolve("Payment Succefull");
+            }
+            else {
+                reject("Try again later");
+            }
+        }, 3000);
+    })
+
+    // Promises Handlings
+    let image = document.getElementById("image");
+    paymentPromises.then(function (res) {
+        console.log(res) //.then used for resolve
+        image.src = "https://mmrinfotech.in/img/submited.gif"
+    })
+
+    paymentPromises.catch(function (rej) {
+        console.log(rej) //.catch used for reject
+        image.src = "https://c.tenor.com/njUDiIoQTaYAAAAC/gambling-payment.gif"
+
+    })
+
+    //using async await
+    async function content() {
+        try {
+            let res = await paymentPromises;
+            image.src = "https://mmrinfotech.in/img/submited.gif"
+        } catch {
+            image.src = "https://c.tenor.com/njUDiIoQTaYAAAAC/gambling-payment.gif"
+        }
+
+    }
+    content();
+
+</script>
