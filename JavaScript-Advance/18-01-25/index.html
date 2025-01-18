@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Management System</h1>
+        <div id="user-role">
+            <button onclick="toggleUserRole()">Toggle User Role (Admin/Student)</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="profile-section">
+            <h2>Your Profile</h2>
+            <div id="profile"></div>
+            <button id="edit-profile-btn" onclick="editProfile()">Edit Profile</button>
+        </section>
+
+        <section id="assignments-section">
+            <h2>Assignments</h2>
+            <div id="assignments-list"></div>
+            <input type="text" id="assignment-filter" placeholder="Filter by topic" oninput="filterAssignments()">
+            <button onclick="sortAssignments()">Sort Assignments by Date</button>
+        </section>
+
+        <section id="lectures-section">
+            <h2>Lectures</h2>
+            <div id="lectures-list"></div>
+            <input type="text" id="lecture-filter" placeholder="Filter by topic" oninput="filterLectures()">
+            <button onclick="sortLectures()">Sort Lectures by Date</button>
+        </section>
+
+        <section id="admin-section" style="display:none;">
+            <h2>Admin Actions</h2>
+            <div>
+                <button onclick="showUsersList()">Show Users List</button>
+                <button onclick="showAddLectureForm()">Add Lecture</button>
+                <button onclick="showAddAssignmentForm()">Add Assignment</button>
+            </div>
+            <div id="admin-users-list"></div>
+            <div id="add-lecture-form" style="display:none;">
+                <h3>Add Lecture</h3>
+                <input type="text" id="lecture-topic" placeholder="Topic">
+                <input type="date" id="lecture-date">
+                <button onclick="addLecture()">Add Lecture</button>
+            </div>
+            <div id="add-assignment-form" style="display:none;">
+                <h3>Add Assignment</h3>
+                <input type="text" id="assignment-topic" placeholder="Topic">
+                <input type="date" id="assignment-date">
+                <button onclick="addAssignment()">Add Assignment</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="Student Management system.js"></script>
+</body>
+
+</html>
